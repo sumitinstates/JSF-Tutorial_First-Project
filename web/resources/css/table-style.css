@@ -1,0 +1,129 @@
+.order-table{   
+	border-collapse:collapse;      
+}
+
+.header{
+	color: black;
+        font-family: cursive;
+        background:none repeat scroll 0 0 #F9F9F9;
+        
+}
+
+.order-table-odd-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #F9F9F9;
+	
+	color: black;
+	text-transform: uppercase;
+        font-family: cursive;
+        opacity: 0.5;
+}
+
+.order-table-even-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #F9F9F9;
+	
+        
+	color: black;
+        text-transform: uppercase;
+        font-family: cursive;
+        opacity: 0.5;   
+}
+
+.Bimage { 
+    background-image:url("#{resource['images:photo.jpg']}"); 
+}
+
+.textAlign{
+	text-align: center;
+}
+
+.textWeight{
+	font-weight: bold;
+}
+
+.fontStyle{
+	font-family: sans-serif;
+}
+
+.id_header{
+    color:black;
+   }
+
+.panel1{
+    margin-left: 105px;
+    margin-top: 70px;
+   
+}
+
+.parentImagePanel{
+    display: inline;  
+}
+
+.imagePanel{
+    margin-left: 440px;
+    margin-top: 80px;
+}
+
+.imagePanel2{
+    float:right;
+    margin-right: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.imagePanel3{
+    float:right;
+    margin-top: 20px;
+}
+
+.formPanel{
+    display: inline-block;
+    
+}
+
+.form1{
+    margin-top: 50px;
+    margin-left: 110px;
+    float:left;
+}
+
+.form2{
+    margin-top: 50px;
+    padding-left: 180px;
+    float:right;   
+}
+
+.form3{
+    float: right;
+    margin-top: 50px;
+    padding-left: 190px;
+}
+
+.hubIdButton{
+    margin-left: 90px;
+}
+
+.searchButton{
+    margin-left: 100px;
+}
+
+.hubListButton{
+    margin-left: 110px;
+}
+.border_top_left{
+    border-radius: 20px 0 0 0;
+    color: black;
+    font-family: cursive;
+    background:none repeat scroll 0 0 #F9F9F9;
+}
+
+.border_top_right{
+    border-radius: 0 20px 0 0;
+    color: black;
+    font-family: cursive;
+    background:none repeat scroll 0 0 #F9F9F9;
+    
+}
+
+

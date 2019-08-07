@@ -1,0 +1,111 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+   xmlns:f = "http://java.sun.com/jsf/core"    
+   xmlns:h = "http://java.sun.com/jsf/html">
+   
+   <h:head>
+      <title>JSF Datatable Tutorial!</title>
+      <h:outputStylesheet library="css" name="table-style.css"></h:outputStylesheet>
+      
+          
+      
+   </h:head>
+   
+   <h:body styleClass="Bimage">
+       
+       <h:panelGroup id="parentImagePanel" class="parentImagePanel"> 
+       <h:panelGroup id="imagePanel" styleClass="imagePanel"> 
+           <h:graphicImage library="images" name="capsule.jpg" width="30%" height="110px" style="opacity: 0.7"></h:graphicImage>
+       </h:panelGroup>
+       
+       <h:panelGroup id="imagePanel2" styleClass="imagePanel2"> 
+           <h:graphicImage library="images" name="fb2.jpg" width="40px"></h:graphicImage>
+       </h:panelGroup>
+       
+       <h:panelGroup id="imagePanel3" styleClass="imagePanel3"> 
+           <h:graphicImage library="images" name="likedin.png" width="40px"></h:graphicImage>
+       </h:panelGroup>
+       </h:panelGroup>    
+       
+       <h:panelGroup id="formPanel" styleClass="formPanel">
+       <form id="form1" class="form1">
+           <h:outputLabel for="HubId" value="Hub Id: " style="font-weight: bold"> </h:outputLabel>
+           <h:inputText id="HubId"></h:inputText>
+               <br></br><br></br>
+               <h:commandButton id="HubId" value="Send Sms" styleClass="hubIdButton"></h:commandButton>
+       </form>
+       
+        <form id="form2" class="form2">
+           <h:outputLabel for="HubList" value="Hub List: " style="font-weight: bold"> </h:outputLabel>
+           <h:inputText id="HubList"></h:inputText>
+               <br></br><br></br>
+               <h:commandButton id="HubList" value="Hub List" styleClass="hubListButton"></h:commandButton>
+       </form>
+           
+        <form id="form3" class="form3">
+           <h:outputLabel for="Search" value="Search: " style="font-weight: bold"> </h:outputLabel>
+           <h:inputText id="Search"></h:inputText>
+               <br></br><br></br>
+               <h:commandButton id="Search" value="Search" styleClass="searchButton"></h:commandButton>
+       </form>    
+       </h:panelGroup>    
+       
+       <h:panelGroup id="panel1" layout="block" styleClass="panel1">
+           <h:dataTable value="#{test.list}" var="details" border="1" cellpadding="30px" cellspacing="30px" styleClass="order-table "  headerClass="header" rowClasses="order-table-odd-row, order-table-even-row">	
+     	<h:column headerClass="border_top_left" rowHeader="true">
+     	<f:facet name="header" >
+     	<h:outputText value="Id" styleClass="id_header"></h:outputText>
+     	</f:facet>
+     	<h:outputText value="#{details.id}"></h:outputText>
+     	</h:column>
+        
+               
+     	<h:column>
+     	<f:facet name="header">
+        <h:outputText value="Customer" styleClass="id_header"></h:outputText>
+     	</f:facet>
+     	<h:outputText value="#{details.customer}" ></h:outputText>
+     	</h:column>
+     	
+     	<h:column>
+     	<f:facet name="header">
+     	<h:outputText value = "ICCID" styleClass="id_header"></h:outputText>
+     	</f:facet>
+     	<h:outputText value="#{details.iCCID}"></h:outputText>
+     	</h:column>
+           
+     	<h:column>
+     	<f:facet name="header">
+     	<h:outputText value="MSISDN" styleClass="id_header"></h:outputText>
+     	</f:facet>
+     	<h:outputText value="#{details.mSISDN}"></h:outputText>
+        </h:column>
+           
+     	<h:column>
+     	<f:facet name="header">
+     	<h:outputLabel value="Recieve_Time" styleClass="id_header"></h:outputLabel>
+     	</f:facet>
+     	<h:outputLabel>#{details.recieve_Time}</h:outputLabel>
+     	</h:column>
+     	
+        <h:column headerClass="border_top_right">
+     	<f:facet name="header">
+        <h:outputLabel value="Message" styleClass="id_header"></h:outputLabel>
+     	</f:facet>
+     	<h:outputLabel>
+     	hi "#{details.message}"
+        </h:outputLabel>
+     	</h:column>
+     	
+   
+  </h:dataTable>
+                   
+</h:panelGroup>
+  
+     		
+</h:body>
+
+</html>           
